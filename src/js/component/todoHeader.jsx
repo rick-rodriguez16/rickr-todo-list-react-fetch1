@@ -22,6 +22,17 @@ const TodoHeader = ({todos, setTodos, newTask, setNewTask, counter, setCounter})
 		setCounter(counter + 1);
 	}
 
+    const checkTextbox = () => {
+        let textBox = document.querySelector(".new-todo");
+        if (textBox.value === "") {
+            alert("Please add a task.");
+            // return false;
+        }
+        else {
+            addTask();
+        }
+    }
+
     return (
         <>
             <header className="header">
@@ -32,11 +43,10 @@ const TodoHeader = ({todos, setTodos, newTask, setNewTask, counter, setCounter})
                     placeholder="What needs to be done?"
                     onChange={event => setNewTask(event.target.value)}
                     value={newTask}
-                    onSubmit={addTask}
                 />
                 <button 
                     className="add-task"
-                    onClick={addTask}
+                    onClick={checkTextbox}
                 >Add Task</button>
             </header>
         </>

@@ -1,0 +1,22 @@
+.todoapp {
+    margin: auto;
+    width: 500px;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.list-item {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.delete-task {
+    margin-left: 50px;
+    visibility: hidden;
+}
+
+.list-item:hover .delete-task {
+    visibility: visible;
+}

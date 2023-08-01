@@ -2,18 +2,19 @@ import React from "react";
 
 const TodoBody = ({todos, setTodos}) => {
 
-    const deleteTask = (taskId) => {
-		let updatedTodos = todos.filter(task => task.id != taskId)
+    const deleteTask = (selectedTodoId) => {
+		let updatedTodos = todos.filter(todo => todo.id != selectedTodoId)
 		setTodos(updatedTodos);
 	}
     
-    let renderTasks = todos.map(task => {
+    let renderTasks = todos.map(todo => {
 		return (
-			<li className="list-item" key={task.id}>
-				<label>{task.title}</label>
+			<li className="list-item" key={todo.id}>
+				<label>{todo.title}</label>
 				<button 
 					className="delete-task" 
-					onClick={() => deleteTask(task.id)}> X </button>
+					onClick={() => deleteTask(todo.id)}
+                > X </button>
 			</li>
 		);
 	})

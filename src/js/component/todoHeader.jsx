@@ -26,7 +26,6 @@ const TodoHeader = ({todos, setTodos, newTask, setNewTask, counter, setCounter})
         let textBox = document.querySelector(".new-todo");
         if (textBox.value === "") {
             alert("Please add a task.");
-            // return false;
         }
         else {
             addTask();

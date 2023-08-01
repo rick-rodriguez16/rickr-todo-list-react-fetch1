@@ -21,7 +21,6 @@ const Todo = () => {
                 />
 				<TodoBody 
                     counter={counter}
-                    setCounter={setCounter}
                     todos={todos} 
                     setTodos={setTodos}
                 />

@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoBody = ({counter, todos, setTodos}) => {
+const TodoBody = ({todos, setTodos}) => {
 
     const deleteTask = (taskId) => {
 		let updatedTodos = todos.filter(task => task.id != taskId)
@@ -22,7 +22,7 @@ const TodoBody = ({counter, todos, setTodos}) => {
         <>
             <section className="main">
                 <ul className="todo-list">
-                    {counter !== 0 ? renderTasks : "No tasks, add a task."}
+                    {todos.length !== 0 ? renderTasks : "No tasks, add a task."}
                 </ul>					
             </section>
         </>

@@ -20,7 +20,6 @@ const Todo = () => {
                     setCounter={setCounter}
                 />
 				<TodoBody 
-                    counter={counter}
                     todos={todos} 
                     setTodos={setTodos}
                 />
